@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Zodiak</title>
+  <style>
+    body {
+        margin: 0;
+        padding: 20px;
+        background: url('gl.jpg') no-repeat center center fixed; /* Gambar Galaksi */
+        background-size: cover;
+        color: white;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+        text-align: center;
+        justify-content: center;
+    }
+
+    h1 {
+      color: #ffffff;
+    }
+
+    .input-group {
+      margin: 20px;
+    }
+
+    .input-group label {
+      font-size: 1.2rem;
+    }
+
+    .input-group input {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #4c6daf;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #1f1b82;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #ffffff;
+      transition: opacity 0.5s;
+      opacity: 0;
+    }
+
+    .result.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kalkulator Zodiak</h1>
+  <div class="input-group">
+    <label for="day">Tanggal Lahir:</label><br>
+    <input type="number" id="day" placeholder="Tanggal (1-31)">
+  </div>
+  <div class="input-group">
+    <label for="month">Bulan Lahir:</label><br>
+    <input type="number" id="month" placeholder="Bulan (1-12)">
+  </div>
+  <button class="btn" onclick="calculateZodiac()">Hitung Zodiak</button>
+  <button class="btn" onclick="resetInput()">Reset</button>
+  <div id="result" class="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
